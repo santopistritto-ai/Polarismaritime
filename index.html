@@ -151,13 +151,38 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm">
-          <label>Nome e cognome<input required type="text" name="name" placeholder="Il tuo nome"></label>
-          <label>Email<input required type="email" name="email" placeholder="equipaggi@servizipolaris.it"></label>
-          <label>Messaggio<textarea required name="message" rows="5" placeholder="Come possiamo aiutarti?"></textarea></label>
-          <button class="button button-primary" type="submit">Invia richiesta</button>
-          <p class="form-note" id="formNote">Il modulo è predisposto per essere collegato all'email aziendale.</p>
-        </form>
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/equipaggi@servizipolaris.it" method="POST" enctype="multipart/form-data">
+  <input type="hidden" name="_subject" value="Nuova candidatura - Polaris Maritime Consulting">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_url" value="https://servizipolaris.it/">
+  <input type="text" name="_honey" style="display:none">
+
+  <label>
+    Nome e cognome
+    <input required type="text" name="name" placeholder="Il tuo nome">
+  </label>
+
+  <label>
+    Email
+    <input required type="email" name="email" placeholder="La tua email">
+  </label>
+
+  <label>
+    Messaggio
+    <textarea required name="message" rows="5" placeholder="Come possiamo aiutarti?"></textarea>
+  </label>
+
+  <label>
+    Invia il tuo CV
+    <input required type="file" name="attachment" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+  </label>
+
+  <button class="button button-primary" type="submit">Invia candidatura</button>
+
+  <p class="form-note" id="formNote">
+    Allega il tuo CV in PDF, DOC o DOCX (massimo 10 MB).
+  </p>
+</form>
       </div>
     </section>
   </main>
