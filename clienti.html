@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I clienti di Polaris Maritime Consulting.">
+  <title>Clienti | Polaris Maritime Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .clients-hero { min-height: 430px; display: flex; align-items: center; position: relative; overflow: hidden; color: #fff; background: #09223c; }
+    .clients-hero::after { content: ""; position: absolute; right: -8%; bottom: -58%; width: 610px; height: 610px; border: 1px solid rgba(185, 220, 230, .24); border-radius: 50%; }
+    .clients-hero .hero-content { padding-top: 100px; }
+    .clients-hero h1 { font-family: "Playfair Display", serif; font-size: clamp(48px, 7vw, 78px); line-height: 1; margin: 0; }
+    .clients-hero p:last-child { max-width: 590px; margin: 24px 0 0; color: #dce8ef; font-size: 18px; line-height: 1.75; }
+    .client-section { background: #f7f9fb; }
+    .client-heading { max-width: 700px; margin-bottom: 50px; }
+    .client-heading p:last-child { color: #526579; font-size: 17px; line-height: 1.75; margin-bottom: 0; }
+    .client-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .client-card { min-height: 190px; display: flex; align-items: center; justify-content: center; padding: 28px; border: 1px solid #d8e2e6; background: #fff; }
+    .client-card img { display: block; max-width: 100%; max-height: 112px; width: auto; height: auto; object-fit: contain; }
+    .client-card.capomare img, .client-card.bambini img { max-height: 135px; }
+    .client-note { margin-top: 30px; color: #63768a; font-size: 14px; }
+    @media (max-width: 800px) { .client-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 520px) { .client-grid { grid-template-columns: 1fr; } .client-card { min-height: 165px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Polaris Maritime Consulting">
+        <img src="logo.jpg" alt="Polaris Maritime Consulting">
+      </a>
+      <button class="menu-toggle" aria-label="Apri menu" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="index.html#azienda">Chi siamo</a>
+        <a href="index.html#servizi">Servizi</a>
+        <a href="index.html#approccio">Approccio</a>
+        <a href="clienti.html" aria-current="page">Clienti</a>
+        <a href="index.html#contatti" class="nav-cta">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="clients-hero">
+      <div class="container hero-content">
+        <p class="eyebrow">LE NOSTRE COLLABORAZIONI</p>
+        <h1>Clienti.</h1>
+        <p>Collaboriamo con realtà del settore marittimo, offrendo un supporto professionale costruito sulle esigenze operative di ogni organizzazione.</p>
+      </div>
+    </section>
+
+    <section class="client-section section">
+      <div class="container">
+        <div class="client-heading">
+          <p class="eyebrow dark">AZIENDE PARTNER</p>
+          <h2>Relazioni che navigano lontano.</h2>
+          <p>Una selezione delle aziende che hanno scelto Polaris Maritime Consulting.</p>
+        </div>
+        <div class="client-grid" aria-label="Elenco clienti">
+          <article class="client-card"><img src="assets/clienti/poseidon.png" alt="Poseidon S.r.l."></article>
+          <article class="client-card"><img src="assets/clienti/tecma.png" alt="Tec.Ma. S.r.l. - Tecnologie Marittime"></article>
+          <article class="client-card"><img src="assets/clienti/augustea.png" alt="Augustea Ship Management S.r.l."></article>
+          <article class="client-card"><img src="assets/clienti/first-priority.png" alt="First Priority Resources International Ltd"></article>
+          <article class="client-card"><img src="assets/clienti/gestour.png" alt="Gestour Compagnia di Navigazione"></article>
+          <article class="client-card capomare"><img src="assets/clienti/capomare.png" alt="Capomare"></article>
+          <article class="client-card bambini"><img src="assets/clienti/bambini.png" alt="Bambini S.p.A."></article>
+        </div>
+        <p class="client-note">I marchi appartengono ai rispettivi proprietari.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Polaris Maritime Consulting</span>
+      <span>Augusta · Sicily · Italy</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
